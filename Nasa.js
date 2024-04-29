@@ -3,6 +3,7 @@ const app=express();
 const axios=require('axios')
 const path=require('path')
 const fs=require('fs')
+const port=process.env.PORT || 3030
 app.get("/",(req,res)=>{
     res.sendFile(path.join(__dirname,'Nasa.html'))
 })
@@ -25,7 +26,7 @@ app.get('/NasaWorld',async(req,res)=>{
     }
 })
 app.listen(3001,()=>{
-    console.log("Hi I am  Ayush SIngh lets Start Nasa")
+    console.log(`process started on port ${port}`)
 })
 
 
